@@ -11,7 +11,7 @@ export default class ImageController{
         
        // ProxyState.on('image', _draw)
         this.getImage()
-        _draw
+        _draw()
     }
 
     async getImage() {

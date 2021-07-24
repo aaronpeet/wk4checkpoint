@@ -10,7 +10,7 @@ export default class QuotesController{
         
         this.getQuote()
         
-        _draw
+        _draw()
 
     }
 
