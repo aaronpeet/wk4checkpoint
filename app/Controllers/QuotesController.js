@@ -9,7 +9,7 @@ export default class QuotesController{
     constructor() {
         
         ProxyState.on('quote', _draw)
-        
+        this.getQuote()
         _draw
 
     }

@@ -5,6 +5,9 @@ import { isValidProp } from "./Utils/isValidProp.js"
 class AppState extends EventEmitter {
   /** @type {Weather[]} */
   weather = []
+
+   /** @type {Quote[]} */
+  quotes = []
 }
 
 export const ProxyState = new Proxy(new AppState(), {
