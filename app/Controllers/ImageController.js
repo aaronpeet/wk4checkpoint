@@ -9,7 +9,7 @@ function _draw() {
 export default class ImageController{
     constructor() {
         
-        ProxyState.on('image', _draw)
+       // ProxyState.on('image', _draw)
         this.getImage()
         _draw
     }

@@ -1,3 +1,4 @@
+import Image from "./Models/Image.js"
 import Quote from "./Models/Quote.js"
 import Weather from "./Models/Weather.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
