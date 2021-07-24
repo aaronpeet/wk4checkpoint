@@ -6,6 +6,7 @@ class QuotesService{
 
     async getQuote() {
         const res = await api.get('quotes')
+        console.log(res.data)
         ProxyState.quotes = new Quote(res.data)
         console.log('pulled from ProxyState', ProxyState.quotes)
     }
