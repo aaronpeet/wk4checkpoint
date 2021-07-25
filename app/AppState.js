@@ -13,6 +13,9 @@ class AppState extends EventEmitter {
 
      /** @type {Image[]} */
   images = []
+
+  tempFahrenActive = true
+  
 }
 
 export const ProxyState = new Proxy(new AppState(), {

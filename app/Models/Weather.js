@@ -1,4 +1,4 @@
-
+import { ProxyState } from "../AppState.js"
 
 export default class Weather {
     constructor(data) {
@@ -11,9 +11,11 @@ export default class Weather {
 
     get Template() {
         return `
-        <p>Temp: ${this.tempChangeC(this.temp)} &deg;C</p>
-        <p>Temp: ${this.tempChangeF(this.temp)} &deg;F</p>
-        <p>City: ${this.name}</p>
+          <button class="btn btn-secondary" onclick="app.weatherController.toggleTemp()">
+            <span class="${ProxyState.tempFahrenActive ? 'tempHidden' : ''}">Temp: ${this.tempChangeC(this.temp)} &deg;C</span>
+            <span class = "${ProxyState.tempFahrenActive ? '' : 'tempHidden'}">Temp: ${this.tempChangeF(this.temp)} &deg;F</span>
+            <span>City: ${this.name}</span>
+        </button>
         `
     }
      tempChangeF(value) {

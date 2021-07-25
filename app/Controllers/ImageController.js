@@ -3,15 +3,15 @@ import { imageService } from "../Services/ImageService.js"
 
 
 function _draw() {
+    //console.log("image draw: ", ProxyState.images.Template);
     document.getElementById('image').innerHTML = ProxyState.images.Template
 }
 
 export default class ImageController{
     constructor() {
         
-       // ProxyState.on('image', _draw)
+        ProxyState.on('images', _draw)
         this.getImage()
-        _draw()
     }
 
     async getImage() {
