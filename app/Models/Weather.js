@@ -12,9 +12,9 @@ export default class Weather {
     get Template() {
         return `
           <button class="btn btn-secondary" onclick="app.weatherController.toggleTemp()">
-            <span class="${ProxyState.tempFahrenActive ? 'tempHidden' : ''}">Temp: ${this.tempChangeC(this.temp)} &deg;C</span>
-            <span class = "${ProxyState.tempFahrenActive ? '' : 'tempHidden'}">Temp: ${this.tempChangeF(this.temp)} &deg;F</span>
-            <span>City: ${this.name}</span>
+            <span class="${ProxyState.tempFahrenActive ? 'tempHidden' : ''}">${this.tempChangeC(this.temp)} &deg;C</span>
+            <span class = "${ProxyState.tempFahrenActive ? '' : 'tempHidden'}">${this.tempChangeF(this.temp)} &deg;F</span>
+            <span class="city">${this.name}</span>
         </button>
         `
     }
