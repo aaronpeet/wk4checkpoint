@@ -10693,6 +10693,9 @@ body {
 
 main {
   flex-grow: 1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .content:hover .author {

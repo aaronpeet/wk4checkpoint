@@ -16,7 +16,11 @@ export default class WeatherController{
     }
 
     toggleTemp() {
-      ProxyState.tempFahrenActive = !ProxyState.tempFahrenActive
+        if (ProxyState.tempFahrenActive == true) {
+          ProxyState.tempFahrenActive = false
+        } else {
+            ProxyState.tempFahrenActive = true
+      }
     }
 
     async getWeather() {
