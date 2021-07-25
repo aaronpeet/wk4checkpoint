@@ -1,3 +1,4 @@
+import Todo from "./Models/Todo.js"
 import Image from "./Models/Image.js"
 import Quote from "./Models/Quote.js"
 import Weather from "./Models/Weather.js"
@@ -15,6 +16,9 @@ class AppState extends EventEmitter {
   images = []
 
   tempFahrenActive = true
+
+  /**@type {Todo[]} */
+  listItem =[]
   
 }
 

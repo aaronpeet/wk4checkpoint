@@ -27,8 +27,25 @@
             <div class="col" id="quote">
             </div>
         </div>
-        <div class="col text-light text-center" id="clock"></div>
+        <h1 class="col text-light text-center bg-dark shadow mt-3" id="clock"></h1>
+        <div class="col-md-3 col-sm-2 my-3">
+            <div class="card listCard" style="width: 18rem; min-height: 23rem;">
+                <div class="card-header text-dark d-flex justify-content-around align-items-center">
+                    <h5><em>To Do List :</em></h5>
+                </div>
+                <div class="p-3">
+                    <ul id="listItem">
 
+                    </ul>
+                </div>
+                <div>
+                    <form onsubmit="app.todosController.addItem()" class="p-3">
+                        <input type="text" name="name" placeholder="Add Tasks..." minlength=3 maxlength=50 required>
+                        <button type="submit" class="btn btn-outline-success">+</button>
+                    </form>
+                </div>
+            </div>
+        </div>
 
     </main>
     <footer class="bg-dark text-light">
