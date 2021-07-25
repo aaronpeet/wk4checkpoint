@@ -1,6 +1,7 @@
 import WeatherController from "./Controllers/WeatherController.js"
 import QuotesController from "./Controllers/QuotesController.js"
 import ImageController from "./Controllers/ImageController.js"
+import ClockController from "./Controllers/ClockController.js"
 
 class App {
  
@@ -9,6 +10,8 @@ class App {
   quotesController = new QuotesController()
   
   imageController = new ImageController()
+
+  clockController = new ClockController()
 
 
 }
