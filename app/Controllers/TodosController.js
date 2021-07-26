@@ -16,7 +16,7 @@ export default class TodosController{
         
         ProxyState.on('listItem', _draw)
         
-       // _draw()
+        _draw()
 
     }
     

@@ -9,8 +9,8 @@ export default class Todo{
 
     get Template() {
         return `
-           <p> <input type="checkbox" id="item" name="name"> ${this.description}
-           <span class="action" onclick="app.todosController.removeItem(${this.id})"> X</span></p>
+           <p> <input type="checkbox" id="item" name="name" onclick="app.todosController.itemCompleted(${this.id})" ${ProxyState.listItem.completed ? 'checked' : ''} > ${this.description}
+           <span class="action" onclick="app.todosController.deleteListItem(${this.id})"> X</span></p>
         `
     }
 }
