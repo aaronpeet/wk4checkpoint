@@ -6,6 +6,16 @@ import Todo from "../Models/Todo.js"
 
 class TodosService{
 
+    constructor() {
+    
+        this.getAllItems()
+}
+   
+    async getAllItems() {
+    const res = await myapi.get()
+    ProxyState.listItem = res.data.map(i => new Todo(i))
+  }
+   
     async createListItem(rawListItem) {
         const res = await myapi.post('', rawListItem)
         ProxyState.listItem = [...ProxyState.listItem, new Todo(res.data)]

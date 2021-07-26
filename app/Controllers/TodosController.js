@@ -5,7 +5,7 @@ import { todosService } from "../Services/TodosService.js"
 function _draw() {
     let template = ''
     ProxyState.listItem.forEach(i => {
-        template += listItem.Template
+        template += i.Template
     })
     document.getElementById('listItem').innerHTML = template
 }
@@ -32,6 +32,14 @@ export default class TodosController{
         } catch (error) {
             console.error(error)
         }
+    }
+
+    async deleteListItem(itemId) {
+        await todosService.deleteListItem(itemId)
+    }
+
+    async itemCompleted(itemId) {
+        await todosService.itemCompleted(itemId)
     }
 
 }
