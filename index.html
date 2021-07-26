@@ -39,8 +39,9 @@
                     </ul>
                 </div>
                 <div>
-                    <form onsubmit="app.todosController.addItem()" class="p-3">
-                        <input type="text" name="name" placeholder="Add Tasks..." minlength=3 maxlength=50 required>
+                    <form onsubmit="app.todosController.createListItem()" class="p-3">
+                        <input type="text" name="description" id="description" placeholder="Add Tasks..." minlength=3
+                            maxlength=50 required>
                         <button type="submit" class="btn btn-outline-success">+</button>
                     </form>
                 </div>

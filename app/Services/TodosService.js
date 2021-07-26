@@ -7,12 +7,13 @@ import Todo from "../Models/Todo.js"
 class TodosService{
 
     async createListItem(rawListItem) {
-        const res = await myapi.post('listItem', rawListItem)
+        const res = await myapi.post('', rawListItem)
         ProxyState.listItem = [...ProxyState.listItem, new Todo(res.data)]
+        console.log('created new list item', ProxyState.listItem)
 }
 
     async deleteListItem(itemId) {
-        const res = await myapi.delete('todos/' + itemId)
+        const res = await myapi.delete('/' + itemId)
         ProxyState.listItem = ProxyState.listItem.filter(i => i.id != itemId)
     }
 
@@ -23,7 +24,8 @@ class TodosService{
         } else {
             foundItem.completed = false
         }
-        const res = await myapi.put()
+        const res = await myapi.put('/' + itemId, foundItem)
+        ProxyState.listItem = ProxyState.listItem
     }
 }
 
